@@ -4,7 +4,7 @@
   "scripts": {
     "build": "tsc",
     "package:build": "bash ./package.sh",
-    "package:publish": "cd package *&& npm publish",
+    "package:publish": "cd package && npm publish",
     "check:type": "tsc --noEmit",
     "check:experiments:postgres": "cd ./experiments/postgres && tsc --noEmit",
     "check:experiments:mongodb": "cd ./experiments/mongodb && tsc --noEmit",
