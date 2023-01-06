@@ -74,11 +74,15 @@ export function transformModelWithFields(dmmfDocument: DmmfDocument) {
 
 function transformModelField(dmmfDocument: DmmfDocument) {
   return (field: PrismaDMMF.Field): DMMF.ModelField => {
-    const attributeArgs = parseDocumentationAttributes<{ name: string }>(
-      field.documentation,
-      "field",
-      "field",
-    );
+    const attributeArgs = parseDocumentationAttributes<{
+      name: string;
+      overrideType?: string;
+    }>(field.documentation, "field", "field");
+
+    if (attributeArgs.overrideType) {
+      field.type = attributeArgs.overrideType;
+    }
+
     const location =
       field.kind === "enum"
         ? "enumTypes"
@@ -110,6 +114,7 @@ function transformModelField(dmmfDocument: DmmfDocument) {
       undefined,
       field.isId,
     );
+
     const { output = false, input = false } = parseDocumentationAttributes<{
       output: boolean;
       input: boolean | InputOmitSetting[];
