@@ -1,11 +1,11 @@
 {
   "name": "typegraphql-prisma-nestjs-extra",
-  "version": "4.8.1-0",
+  "version": "4.8.1-2",
   "scripts": {
     "build": "tsc",
     "package:build": "bash ./package.sh",
     "package:publish": "cd package && npm publish",
-    "package:release": "npm run build && package:build && npm run package:publish",
+    "package:release": "npm run package:build && npm run package:publish",
     "check:type": "tsc --noEmit",
     "check:experiments:postgres": "cd ./experiments/postgres && tsc --noEmit",
     "check:experiments:mongodb": "cd ./experiments/mongodb && tsc --noEmit",
