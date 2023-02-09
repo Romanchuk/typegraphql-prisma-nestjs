@@ -1,0 +1,1398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserCreateInput\\", {
+  isAbstract: true
+})
+export class UserCreateInput {
+  @Field(_type => Date, {
+    nullable: false
+  })
+  dateOfBirth!: Date;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  name!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserCreateManyInput\\", {
+  isAbstract: true
+})
+export class UserCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => Date, {
+    nullable: false
+  })
+  dateOfBirth!: Date;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  name!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserOrderByWithRelationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"UserOrderByWithRelationInput\\", {
+  isAbstract: true
+})
+export class UserOrderByWithRelationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  dateOfBirth?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  name?: \\"asc\\" | \\"desc\\" | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserScalarWhereWithAggregatesInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeWithAggregatesFilter } from \\"../inputs/DateTimeWithAggregatesFilter\\";
+import { FloatNullableWithAggregatesFilter } from \\"../inputs/FloatNullableWithAggregatesFilter\\";
+import { IntWithAggregatesFilter } from \\"../inputs/IntWithAggregatesFilter\\";
+import { StringWithAggregatesFilter } from \\"../inputs/StringWithAggregatesFilter\\";
+
+@InputType(\\"UserScalarWhereWithAggregatesInput\\", {
+  isAbstract: true
+})
+export class UserScalarWhereWithAggregatesInput {
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  AND?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  OR?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  NOT?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => IntWithAggregatesFilter, {
+    nullable: true
+  })
+  id?: IntWithAggregatesFilter | undefined;
+
+  @Field(_type => DateTimeWithAggregatesFilter, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeWithAggregatesFilter | undefined;
+
+  @Field(_type => StringWithAggregatesFilter, {
+    nullable: true
+  })
+  name?: StringWithAggregatesFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFieldUpdateOperationsInput } from \\"../inputs/DateTimeFieldUpdateOperationsInput\\";
+import { NullableFloatFieldUpdateOperationsInput } from \\"../inputs/NullableFloatFieldUpdateOperationsInput\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"UserUpdateInput\\", {
+  isAbstract: true
+})
+export class UserUpdateInput {
+  @Field(_type => DateTimeFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  name?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserUpdateManyMutationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFieldUpdateOperationsInput } from \\"../inputs/DateTimeFieldUpdateOperationsInput\\";
+import { NullableFloatFieldUpdateOperationsInput } from \\"../inputs/NullableFloatFieldUpdateOperationsInput\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"UserUpdateManyMutationInput\\", {
+  isAbstract: true
+})
+export class UserUpdateManyMutationInput {
+  @Field(_type => DateTimeFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  name?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFilter } from \\"../inputs/DateTimeFilter\\";
+import { FloatNullableFilter } from \\"../inputs/FloatNullableFilter\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"UserWhereInput\\", {
+  isAbstract: true
+})
+export class UserWhereInput {
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  AND?: UserWhereInput[] | undefined;
+
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  OR?: UserWhereInput[] | undefined;
+
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  NOT?: UserWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => DateTimeFilter, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  name?: StringFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(input: true)\` set should properly generate input type class for prisma model without the omitted field: UserWhereUniqueInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserWhereUniqueInput\\", {
+  isAbstract: true
+})
+export class UserWhereUniqueInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserCreateInput\\", {
+  isAbstract: true
+})
+export class UserCreateInput {
+  @Field(_type => Date, {
+    nullable: false
+  })
+  dateOfBirth!: Date;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  name!: string;
+
+  @Field(_type => Float, {
+    nullable: true
+  })
+  balance?: number | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserCreateManyInput\\", {
+  isAbstract: true
+})
+export class UserCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => Date, {
+    nullable: false
+  })
+  dateOfBirth!: Date;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  name!: string;
+
+  @Field(_type => Float, {
+    nullable: true
+  })
+  balance?: number | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserOrderByWithRelationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"UserOrderByWithRelationInput\\", {
+  isAbstract: true
+})
+export class UserOrderByWithRelationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  dateOfBirth?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  name?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  balance?: \\"asc\\" | \\"desc\\" | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserScalarWhereWithAggregatesInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeWithAggregatesFilter } from \\"../inputs/DateTimeWithAggregatesFilter\\";
+import { FloatNullableWithAggregatesFilter } from \\"../inputs/FloatNullableWithAggregatesFilter\\";
+import { IntWithAggregatesFilter } from \\"../inputs/IntWithAggregatesFilter\\";
+import { StringWithAggregatesFilter } from \\"../inputs/StringWithAggregatesFilter\\";
+
+@InputType(\\"UserScalarWhereWithAggregatesInput\\", {
+  isAbstract: true
+})
+export class UserScalarWhereWithAggregatesInput {
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  AND?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  OR?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => [UserScalarWhereWithAggregatesInput], {
+    nullable: true
+  })
+  NOT?: UserScalarWhereWithAggregatesInput[] | undefined;
+
+  @Field(_type => IntWithAggregatesFilter, {
+    nullable: true
+  })
+  id?: IntWithAggregatesFilter | undefined;
+
+  @Field(_type => DateTimeWithAggregatesFilter, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeWithAggregatesFilter | undefined;
+
+  @Field(_type => StringWithAggregatesFilter, {
+    nullable: true
+  })
+  name?: StringWithAggregatesFilter | undefined;
+
+  @Field(_type => FloatNullableWithAggregatesFilter, {
+    nullable: true
+  })
+  balance?: FloatNullableWithAggregatesFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFieldUpdateOperationsInput } from \\"../inputs/DateTimeFieldUpdateOperationsInput\\";
+import { NullableFloatFieldUpdateOperationsInput } from \\"../inputs/NullableFloatFieldUpdateOperationsInput\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"UserUpdateInput\\", {
+  isAbstract: true
+})
+export class UserUpdateInput {
+  @Field(_type => DateTimeFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  name?: StringFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => NullableFloatFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  balance?: NullableFloatFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserUpdateManyMutationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFieldUpdateOperationsInput } from \\"../inputs/DateTimeFieldUpdateOperationsInput\\";
+import { NullableFloatFieldUpdateOperationsInput } from \\"../inputs/NullableFloatFieldUpdateOperationsInput\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"UserUpdateManyMutationInput\\", {
+  isAbstract: true
+})
+export class UserUpdateManyMutationInput {
+  @Field(_type => DateTimeFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  name?: StringFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => NullableFloatFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  balance?: NullableFloatFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { DateTimeFilter } from \\"../inputs/DateTimeFilter\\";
+import { FloatNullableFilter } from \\"../inputs/FloatNullableFilter\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"UserWhereInput\\", {
+  isAbstract: true
+})
+export class UserWhereInput {
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  AND?: UserWhereInput[] | undefined;
+
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  OR?: UserWhereInput[] | undefined;
+
+  @Field(_type => [UserWhereInput], {
+    nullable: true
+  })
+  NOT?: UserWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => DateTimeFilter, {
+    nullable: true
+  })
+  dateOfBirth?: DateTimeFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  name?: StringFilter | undefined;
+
+  @Field(_type => FloatNullableFilter, {
+    nullable: true
+  })
+  balance?: FloatNullableFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has \`omit(output: true)\` set should properly generate input type class for prisma model with the omitted field: UserWhereUniqueInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"UserWhereUniqueInput\\", {
+  isAbstract: true
+})
+export class UserWhereUniqueInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has both create and update omit input set should properly generate create and update input type classes without that field: SampleModelCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateInput {
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has both create and update omit input set should properly generate create and update input type classes without that field: SampleModelCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateManyInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has both create and update omit input set should properly generate create and update input type classes without that field: SampleModelUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has both create and update omit input set should properly generate other input type classes with that field: SampleModelOrderByWithAggregationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SampleModelAvgOrderByAggregateInput } from \\"../inputs/SampleModelAvgOrderByAggregateInput\\";
+import { SampleModelCountOrderByAggregateInput } from \\"../inputs/SampleModelCountOrderByAggregateInput\\";
+import { SampleModelMaxOrderByAggregateInput } from \\"../inputs/SampleModelMaxOrderByAggregateInput\\";
+import { SampleModelMinOrderByAggregateInput } from \\"../inputs/SampleModelMinOrderByAggregateInput\\";
+import { SampleModelSumOrderByAggregateInput } from \\"../inputs/SampleModelSumOrderByAggregateInput\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"SampleModelOrderByWithAggregationInput\\", {
+  isAbstract: true
+})
+export class SampleModelOrderByWithAggregationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  omittedField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  normalField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SampleModelCountOrderByAggregateInput, {
+    nullable: true
+  })
+  _count?: SampleModelCountOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelAvgOrderByAggregateInput, {
+    nullable: true
+  })
+  _avg?: SampleModelAvgOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMaxOrderByAggregateInput, {
+    nullable: true
+  })
+  _max?: SampleModelMaxOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMinOrderByAggregateInput, {
+    nullable: true
+  })
+  _min?: SampleModelMinOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelSumOrderByAggregateInput, {
+    nullable: true
+  })
+  _sum?: SampleModelSumOrderByAggregateInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has both create and update omit input set should properly generate other input type classes with that field: SampleModelWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"SampleModelWhereInput\\", {
+  isAbstract: true
+})
+export class SampleModelWhereInput {
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  AND?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  OR?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  NOT?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  omittedField?: StringFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  normalField?: StringFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input create set should properly generate create input type classes without that field: SampleModelCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateInput {
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input create set should properly generate create input type classes without that field: SampleModelCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateManyInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input create set should properly generate other input type classes with that field: SampleModelOrderByWithAggregationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SampleModelAvgOrderByAggregateInput } from \\"../inputs/SampleModelAvgOrderByAggregateInput\\";
+import { SampleModelCountOrderByAggregateInput } from \\"../inputs/SampleModelCountOrderByAggregateInput\\";
+import { SampleModelMaxOrderByAggregateInput } from \\"../inputs/SampleModelMaxOrderByAggregateInput\\";
+import { SampleModelMinOrderByAggregateInput } from \\"../inputs/SampleModelMinOrderByAggregateInput\\";
+import { SampleModelSumOrderByAggregateInput } from \\"../inputs/SampleModelSumOrderByAggregateInput\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"SampleModelOrderByWithAggregationInput\\", {
+  isAbstract: true
+})
+export class SampleModelOrderByWithAggregationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  omittedField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  normalField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SampleModelCountOrderByAggregateInput, {
+    nullable: true
+  })
+  _count?: SampleModelCountOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelAvgOrderByAggregateInput, {
+    nullable: true
+  })
+  _avg?: SampleModelAvgOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMaxOrderByAggregateInput, {
+    nullable: true
+  })
+  _max?: SampleModelMaxOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMinOrderByAggregateInput, {
+    nullable: true
+  })
+  _min?: SampleModelMinOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelSumOrderByAggregateInput, {
+    nullable: true
+  })
+  _sum?: SampleModelSumOrderByAggregateInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input create set should properly generate other input type classes with that field: SampleModelUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  omittedField?: StringFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input create set should properly generate other input type classes with that field: SampleModelWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"SampleModelWhereInput\\", {
+  isAbstract: true
+})
+export class SampleModelWhereInput {
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  AND?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  OR?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  NOT?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  omittedField?: StringFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  normalField?: StringFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input orderBy set should properly generate orderBy input type classes without that field: SampleModelOrderByWithAggregationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SampleModelAvgOrderByAggregateInput } from \\"../inputs/SampleModelAvgOrderByAggregateInput\\";
+import { SampleModelCountOrderByAggregateInput } from \\"../inputs/SampleModelCountOrderByAggregateInput\\";
+import { SampleModelMaxOrderByAggregateInput } from \\"../inputs/SampleModelMaxOrderByAggregateInput\\";
+import { SampleModelMinOrderByAggregateInput } from \\"../inputs/SampleModelMinOrderByAggregateInput\\";
+import { SampleModelSumOrderByAggregateInput } from \\"../inputs/SampleModelSumOrderByAggregateInput\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"SampleModelOrderByWithAggregationInput\\", {
+  isAbstract: true
+})
+export class SampleModelOrderByWithAggregationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  normalField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SampleModelCountOrderByAggregateInput, {
+    nullable: true
+  })
+  _count?: SampleModelCountOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelAvgOrderByAggregateInput, {
+    nullable: true
+  })
+  _avg?: SampleModelAvgOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMaxOrderByAggregateInput, {
+    nullable: true
+  })
+  _max?: SampleModelMaxOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMinOrderByAggregateInput, {
+    nullable: true
+  })
+  _min?: SampleModelMinOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelSumOrderByAggregateInput, {
+    nullable: true
+  })
+  _sum?: SampleModelSumOrderByAggregateInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input orderBy set should properly generate other input type classes with that field: SampleModelCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateInput {
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input orderBy set should properly generate other input type classes with that field: SampleModelCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateManyInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input orderBy set should properly generate other input type classes with that field: SampleModelUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  omittedField?: StringFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input orderBy set should properly generate other input type classes with that field: SampleModelWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"SampleModelWhereInput\\", {
+  isAbstract: true
+})
+export class SampleModelWhereInput {
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  AND?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  OR?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  NOT?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  omittedField?: StringFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  normalField?: StringFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate other input type classes with that field: SampleModelCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateInput {
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate other input type classes with that field: SampleModelCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateManyInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate other input type classes with that field: SampleModelOrderByWithAggregationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SampleModelAvgOrderByAggregateInput } from \\"../inputs/SampleModelAvgOrderByAggregateInput\\";
+import { SampleModelCountOrderByAggregateInput } from \\"../inputs/SampleModelCountOrderByAggregateInput\\";
+import { SampleModelMaxOrderByAggregateInput } from \\"../inputs/SampleModelMaxOrderByAggregateInput\\";
+import { SampleModelMinOrderByAggregateInput } from \\"../inputs/SampleModelMinOrderByAggregateInput\\";
+import { SampleModelSumOrderByAggregateInput } from \\"../inputs/SampleModelSumOrderByAggregateInput\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"SampleModelOrderByWithAggregationInput\\", {
+  isAbstract: true
+})
+export class SampleModelOrderByWithAggregationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  omittedField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  normalField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SampleModelCountOrderByAggregateInput, {
+    nullable: true
+  })
+  _count?: SampleModelCountOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelAvgOrderByAggregateInput, {
+    nullable: true
+  })
+  _avg?: SampleModelAvgOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMaxOrderByAggregateInput, {
+    nullable: true
+  })
+  _max?: SampleModelMaxOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMinOrderByAggregateInput, {
+    nullable: true
+  })
+  _min?: SampleModelMinOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelSumOrderByAggregateInput, {
+    nullable: true
+  })
+  _sum?: SampleModelSumOrderByAggregateInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate other input type classes with that field: SampleModelWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"SampleModelWhereInput\\", {
+  isAbstract: true
+})
+export class SampleModelWhereInput {
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  AND?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  OR?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  NOT?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  omittedField?: StringFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  normalField?: StringFilter | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate update input type classes without that field: SampleModelUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input update set should properly generate update input type classes without that field: SampleModelUpdateManyMutationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateManyMutationInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateManyMutationInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input where set should properly generate other input type classes with that field: SampleModelCreateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateInput {
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input where set should properly generate other input type classes with that field: SampleModelCreateManyInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+
+@InputType(\\"SampleModelCreateManyInput\\", {
+  isAbstract: true
+})
+export class SampleModelCreateManyInput {
+  @Field(_type => Int, {
+    nullable: true
+  })
+  id?: number | undefined;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  omittedField!: string;
+
+  @Field(_type => String, {
+    nullable: false
+  })
+  normalField!: string;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input where set should properly generate other input type classes with that field: SampleModelOrderByWithAggregationInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { SampleModelAvgOrderByAggregateInput } from \\"../inputs/SampleModelAvgOrderByAggregateInput\\";
+import { SampleModelCountOrderByAggregateInput } from \\"../inputs/SampleModelCountOrderByAggregateInput\\";
+import { SampleModelMaxOrderByAggregateInput } from \\"../inputs/SampleModelMaxOrderByAggregateInput\\";
+import { SampleModelMinOrderByAggregateInput } from \\"../inputs/SampleModelMinOrderByAggregateInput\\";
+import { SampleModelSumOrderByAggregateInput } from \\"../inputs/SampleModelSumOrderByAggregateInput\\";
+import { SortOrder } from \\"../../enums/SortOrder\\";
+
+@InputType(\\"SampleModelOrderByWithAggregationInput\\", {
+  isAbstract: true
+})
+export class SampleModelOrderByWithAggregationInput {
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  omittedField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SortOrder, {
+    nullable: true
+  })
+  normalField?: \\"asc\\" | \\"desc\\" | undefined;
+
+  @Field(_type => SampleModelCountOrderByAggregateInput, {
+    nullable: true
+  })
+  _count?: SampleModelCountOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelAvgOrderByAggregateInput, {
+    nullable: true
+  })
+  _avg?: SampleModelAvgOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMaxOrderByAggregateInput, {
+    nullable: true
+  })
+  _max?: SampleModelMaxOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelMinOrderByAggregateInput, {
+    nullable: true
+  })
+  _min?: SampleModelMinOrderByAggregateInput | undefined;
+
+  @Field(_type => SampleModelSumOrderByAggregateInput, {
+    nullable: true
+  })
+  _sum?: SampleModelSumOrderByAggregateInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input where set should properly generate other input type classes with that field: SampleModelUpdateInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { StringFieldUpdateOperationsInput } from \\"../inputs/StringFieldUpdateOperationsInput\\";
+
+@InputType(\\"SampleModelUpdateInput\\", {
+  isAbstract: true
+})
+export class SampleModelUpdateInput {
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  omittedField?: StringFieldUpdateOperationsInput | undefined;
+
+  @Field(_type => StringFieldUpdateOperationsInput, {
+    nullable: true
+  })
+  normalField?: StringFieldUpdateOperationsInput | undefined;
+}
+"
+`;
+
+exports[`omit-fields when model field has omit input where set should properly generate where input type classes without that field: SampleModelWhereInput 1`] = `
+"import { Args, ArgsType, Context, Field, Float, ID, Info, InputType, Int, Mutation, ObjectType, Query, ResolveField, Resolver, Root, registerEnumType } from \\"@nestjs/graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar } from \\"../../scalars\\";
+import { IntFilter } from \\"../inputs/IntFilter\\";
+import { StringFilter } from \\"../inputs/StringFilter\\";
+
+@InputType(\\"SampleModelWhereInput\\", {
+  isAbstract: true
+})
+export class SampleModelWhereInput {
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  AND?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  OR?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => [SampleModelWhereInput], {
+    nullable: true
+  })
+  NOT?: SampleModelWhereInput[] | undefined;
+
+  @Field(_type => IntFilter, {
+    nullable: true
+  })
+  id?: IntFilter | undefined;
+
+  @Field(_type => StringFilter, {
+    nullable: true
+  })
+  normalField?: StringFilter | undefined;
+}
+"
+`;
